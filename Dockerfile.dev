@@ -1,0 +1,6 @@
+FROM node:19.5.0-alpine
+WORKDIR /frontend
+COPY package.json ./
+RUN npm install
+# COPY ./ ./  no need COPY volumes reference is used
+CMD ["npm", "run", "start"]
